@@ -1,0 +1,46 @@
+---
+
+- name: adding epel repo
+  package: name={{item}} state=installed
+  with_items:
+    - epel-release
+
+- name: Get mysql community edition
+  yum:  name=http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+        state=present
+
+- name: install mysql CE 
+  yum: name=mysql-server state=present
+
+- name: install MySql-Python
+  yum: name=MySQL-python state=present
+
+
+- name: start mysql CE
+  service: name=mysqld  state=started 
+  
+- name: set the root password
+  mysql_user: name=root host="{{item}}"
+              password={{ mysql_root_pass }}
+              priv='*.*:ALL,GRANT'
+              login_user=root
+              login_password=""
+              state=present
+  with_items:
+    - "{{ ansible_default_ipv4.address }}"
+    - localhost
+    - 127.0.0.1
+    - ::1
+  ignore_errors: yes
+
+- name: write .my.cnf file in root directory 
+  template: src=my.cnf.j2 dest=/root/.my.cnf mode=0600
+
+
+- name: Remove anonymous users
+  mysql_user: name="" state=absent
+  ignore_errors: yes
+
+- name: Remove test database 
+  mysql_db: name=test state=absent
+  ignore_errors: yes

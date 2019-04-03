@@ -1,0 +1,8 @@
+---
+# vars file for sysdev.wordpress
+database_name_here:  wordpress
+username_here: wordpress
+password_here:  12345678
+dbhost_here: localhost 
+
+

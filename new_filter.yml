@@ -1,0 +1,17 @@
+---
+- hosts: centos
+  vars:
+    motd_value: "{{ lookup('file', '/etc/motd') }}"
+  tasks:
+    - name: Print first message
+      debug:
+        msg: "{{'test'| upper }}"
+    - name: Print second message
+      debug:
+        msg: "{{'test'| upper }}"
+    - name: Print third message
+      debug:
+        msg: "{{'test'| a_filter}}"
+    - name: Print fourth message
+      debug:
+        msg: "motd value is {{ motd_value }}"

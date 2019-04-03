@@ -1,0 +1,2 @@
+---
+mysql_root_pass: "{{ lookup('env','MYSQL_ROOT_PASS') | default('secretpass',true) }}"

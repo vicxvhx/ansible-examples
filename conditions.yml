@@ -1,0 +1,11 @@
+---
+- hosts: centos
+  vars_prompt:
+    - name: "is_true"
+      prompt: "Entrer votre valeur true ou false"
+      private: no
+  tasks:
+    - name: create file
+      file: state=touch path=/home/hme/xyz.conf
+      when: is_true == "true"
+

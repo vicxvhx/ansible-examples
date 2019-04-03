@@ -1,0 +1,6 @@
+---
+# tasks file for sysdev.http
+
+- name: install httpd
+  yum: name=httpd  state=present
+

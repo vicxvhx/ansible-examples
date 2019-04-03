@@ -1,0 +1,15 @@
+---
+- hosts:  centos
+  become: true
+  tasks: 
+    - name: Install mysqld server
+      yum: name=mariadb-server  state=latest
+      ignore_errors: yes
+      register: there
+      tags: 
+        - packages
+    - name:  start mysqld if there 
+      service: name=mysqld state=started
+      register: running
+      tags: 
+        - startup

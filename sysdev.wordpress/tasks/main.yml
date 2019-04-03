@@ -1,0 +1,38 @@
+---
+# tasks file for sysdev.wordpress
+# 
+
+- name: Create wordpress database
+  mysql_db:  name=wordpress state=present
+
+- name: Create a wordpress user 
+  mysql_user:  name=wordpress password="{{ password_here }}"
+               priv='*.*:ALL,GRANT'
+               state=present
+
+- name: install php for wordpress
+  yum:  name={{item}} state=present 
+  with_items: 
+    - php
+    - php-gd
+    - php-pear
+    - php-mysql
+
+- name:  restart httpd
+  service:  name=httpd state=restarted
+
+- name: unarchive wordpress
+  unarchive: src=https://wordpress.org/latest.tar.gz
+             dest=/tmp/
+             remote_src=True
+
+- name: remove htm folder
+  command:  /usr/bin/rm -Rf /var/www/html
+
+- name: move wordpress
+  command: /usr/bin/mv  /tmp/wordpress /var/www/html
+
+- name: copy template to host
+  template: src=wp-config.j2  dest=/var/www/html/wp-config.php
+  
+

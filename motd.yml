@@ -1,0 +1,12 @@
+---
+- hosts: centos
+  tasks: 
+   - name:  get motd contents 
+     shell: cat /etc/motd
+     register: motd_contents
+   - debug: msg="stdout={{ motd_contents }}"
+   #- debug: msg="MOTD is EMPTY"
+   #  when: motd_contents.stdout == ""
+
+
+
