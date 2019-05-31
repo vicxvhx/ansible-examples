@@ -4,7 +4,7 @@
   - name:  multiple items .- "{{ item }}"
     file: 
       state:  touch 
-      path:  /home/hme/{{ item }}
+      path:  /home/{{ansible_ssh_user}}/{{ item }}
     with_items:
       - file_no_1
       - file_no_2

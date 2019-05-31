@@ -3,7 +3,7 @@
   tasks:
     - name: add hostname to config
       lineinfile: 
-        dest: /home/hme/hostname.conf
+        dest: /home/{{ansible_ssh_user}}/hostname.conf
         regexp: ^Hostname=.*
         insertafter:  ^# Hostname=
         line:  Hostname={{ ansible_hostname }}
