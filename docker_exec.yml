@@ -16,8 +16,9 @@
       changed_when: false
 
     - name: create directory for ssh keys
-      become: true
+      #become: true
       delegate_to: my_jenkins
-      file:
-        path: "/var/jenkins_home/.ssh/jupiter"
-        state: directory
+      shell: ls -alrt
+      #file:
+      # path: "/var/jenkins_home/.ssh/jupiter"
+      # state: directory
