@@ -1,0 +1,23 @@
+---
+- hosts: centos
+  become: true
+  tasks:
+    - name: create jenkins container
+      docker_container:
+        docker_host: 0.0.0.0:2375
+        name: my_jenkins
+        image: jenkins
+
+    - name: add container to inventory
+      add_host:
+        name: my_jenkins
+        ansible_connection: docker
+        ansible_user: jenkins
+      changed_when: false
+
+    - name: create directory for ssh keys
+      become: true
+      delegate_to: my_jenkins
+      file:
+        path: "/var/jenkins_home/.ssh/jupiter"
+        state: directory
