@@ -1,7 +1,7 @@
 [alpine]
-172.17.0.3  ansible_user=alpine  ansible_password=xxxx ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
+172.17.0.4  ansible_user=alpine  ansible_password=xxxx ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
 [centos]
-172.17.0.4  ansible_user=centos  ansible_password=xxxx ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
+172.17.0.3  ansible_user=centos  ansible_password=xxxx ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
 [ubuntu]
 172.17.0.2  ansible_user=ubuntu  ansible_password=xxxxxx ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
 [centos-remote]
