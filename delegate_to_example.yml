@@ -4,6 +4,11 @@
   - name: get a token
     command: openssl genrsa -out /home/centos/Dev.key 2048
     delegate_to: target2
+  - name: synchronize file
+    synchonize:
+      src: /tmp
+      dest: /tmp
+
 
 
 
