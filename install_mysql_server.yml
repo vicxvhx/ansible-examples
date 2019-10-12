@@ -8,8 +8,8 @@
       register: there
       tags: 
         - packages
-    - name:  start mysqld if there 
-      service: name=mysqld state=started
+    - name:  start mariadb if there 
+      service: name=mariadb state=started
       register: running
       tags: 
         - startup
