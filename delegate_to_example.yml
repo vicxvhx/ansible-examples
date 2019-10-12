@@ -3,7 +3,7 @@
   tasks:
   - name: get a token
     command: openssl genrsa -out /home/centos/Dev.key 2048
-    delegate_to: centos_remote_b
+    delegate_to: target2
 
 
 
