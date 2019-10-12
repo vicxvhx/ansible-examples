@@ -12,4 +12,3 @@
     - name: Funny message
       debug:
         msg: "{{ motd_value | a_filter}}"
-
