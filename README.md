@@ -1,6 +1,6 @@
-# ansible-examples
+# Installation du bac a sable ansible-examples
 
-## mise en place des containers et de l'inventaire
+## Mise en place des containers et du fichier inventory
 Demarrer des containers pour simuler plusieurs machines   
 ``docker run -d --name target1 systemdevformations/ubuntu_ssh
   docker run -d --name target2 systemdevformations/centos_ssh
@@ -28,17 +28,28 @@ et modifier le fichier inventory copie precedement
 dans vi faire une substition
 ```:1,$s/=xxx/<le password prevu pour le cours>/```
  
-en fonction de vos adresses IP  
-modifier egalement les groupes de machines centos remote et centos ssh
+en fonction de vos adresses IP fourni en cours 
+modifier egalement la VM centos-remote
   
  
-## Installation de VirtualEnv Python
+## Installation de VirtualEnv Python et Test Ad-Hoc commande
 
 Dans votre home directory, faire
 `` python3 -m venv venv``  
 cela installe le virtualenv Python dans la directory venv  
 Faire  
 ```source venv/bin/activate``` 
+Votre prompt change 
+```(venv) [centos@ansible-oxiane-controller-2 ~]$```  
+Faire   
+```pip3 install wheel```
+qui install le package wheel qui gere les package Pypi    
+et
+```pip3 install ansible```
+et faire la commande Ansible Ad-Hoc 
+```ansible all -m ping -i inventory```
+
+
 
 
 
