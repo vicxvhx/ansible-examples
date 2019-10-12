@@ -2,7 +2,7 @@
 - name: Create MOTD file
   hosts: all
   vars:
-      test_message: " Ansible @ SIGI"
+      text_message: " Ansible @ SIGI"
   tasks:
     - name: copy template file
       template:
