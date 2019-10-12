@@ -4,12 +4,15 @@
   vars:
     motd_value: "{{ lookup('file', '/etc/motd') }}"
   tasks:
+    - name: cat file
+      command: cat /etc/motd
+      register: result
     - name: Uppercase message
       debug:
-        msg: "{{ motd_value | upper }}"
+        msg: "{{ result | upper }}"
     - name: Lower Message
       debug:
-        msg: "{{ motd_value | lower }}"
+        msg: "{{ result | lower }}"
     - name: Funny message
       debug:
-        msg: "{{ motd_value | a_filter}}"
+        msg: "{{ result | a_filter}}"
