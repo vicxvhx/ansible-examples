@@ -3,13 +3,16 @@
   tasks:
   - name: get a token
     command: openssl genrsa -out Dev.key 2048
+  - name: read file
+    shell: cat Dev.key
+    register: my_token
   - name: get a hash
     shell: echo {{ '12345678' | hash('md5') }}
     register: my_hash
   - name: add new node into runtime inventory
     add_host:
        name: "dummy"
-       token: "{{ loockup('file','Dev.key') }}"
+       token: "{{ my_token }}"
        hash: "{{ my_hash }}"
        ip_address: "192.168.1.10"
 
