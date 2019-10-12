@@ -3,15 +3,13 @@
   vars:
     motd_value: "{{ lookup('file', '/etc/motd') }}"
   tasks:
-    - name: Print first message
+    - name: Uppercase message
       debug:
-        msg: "{{'TeSt '| upper }}"
-    - name: Print second message
+        msg: "{{ motd_value| upper }}"
+    - name: Lower Message
       debug:
-        msg: "{{'TeST'| lower }}"
-    - name: Print third message
+        msg: "{{ motd_value| lower }}"
+    - name: Funny message
       debug:
-        msg: "{{'test'| a_filter}}"
-    - name: Print fourth message
-      debug:
-        msg: "motd value is {{ motd_value }}"
+        msg: "{{ motd_value | a_filter}}"
+
