@@ -6,10 +6,10 @@
   tasks:
     - name: Uppercase message
       debug:
-        msg: "{{ motd_value.stdout | upper }}"
+        msg: "{{ motd_value | upper }}"
     - name: Lower Message
       debug:
-        msg: "{{ motd_value.stdout | lower }}"
+        msg: "{{ motd_value | lower }}"
     - name: Funny message
       debug:
-        msg: "{{ motd_value.stdout | a_filter}}"
+        msg: "{{ motd_value | a_filter}}"
