@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: centos_remote_a
   tasks:
   - name: get a token
     command: openssl genrsa -out Dev.key 2048
@@ -14,7 +14,7 @@
        hash: "{{ my_hash }}"
        ip_address: "192.168.1.10"
 
-- hosts: centosdocker
+- hosts: target2
   tasks:
     - name: create a file
       file: src=/tmp/values state=touch
