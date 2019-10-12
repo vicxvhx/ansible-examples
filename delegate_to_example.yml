@@ -2,7 +2,7 @@
 - hosts: centos_remote_a
   tasks:
   - name: get a token
-    command: openssl genrsa -out Dev.key 2048
+    command: openssl genrsa -out /home/centos/Dev.key 2048
   - name: copy from centos_remote_a to target2
     synchronize:
       src: /home/centos/Dev.key
