@@ -1,10 +1,13 @@
 ---
 - name: Create MOTD file
+  hosts: all
   vars:
       test_message: " Ansible @ SIGI"
-  template:
-    src: motd.j2
-    dest: /etc/motd
+  tasks:
+    - name: copy template file
+      template:
+        src: motd.j2
+        dest: /etc/motd
   tags:
     - motd_config
 
