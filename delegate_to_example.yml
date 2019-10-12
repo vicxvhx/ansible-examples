@@ -1,5 +1,5 @@
 ---
-- hosts: centos_remote_a
+- hosts: localhost
   become: true
   tasks:
   - name: get a token
