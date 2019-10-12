@@ -19,6 +19,30 @@ vers l'autre host.
 ## Egalement possible de le faire avec delegate_to
 ```ansible-playbook -i ../inventory_children delegate_to_example.yml```
 
+## Change the Message Of The Day (MOTD) 
+```ansible-playbook -i ../inventory_children motd.yml --limit target2```
+
+## Etude sur les filters 
+```ansible-playbook -i ../inventory_children new_filter.yml --limit target2```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
