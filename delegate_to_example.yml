@@ -8,6 +8,7 @@
     synchronize:
       src: /home/centos/Dev.key
       dest: rsync://tmp/Dev.key
+      mode: pull
     delegate_to: target2
 
 
