@@ -7,8 +7,7 @@
   - name: copy from centos_remote_a to target2
     synchronize:
       src: /home/centos/Dev.key
-      dest: /tmp/Dev.key
-      mode: pull
+      dest: rsync://tmp/Dev.key
     delegate_to: target2
 
 
