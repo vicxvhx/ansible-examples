@@ -7,7 +7,6 @@
     synchronize:
       src: /home/centos/Dev.key
       dest: /tmp/Dev.key
-      mode: pull
     delegate_to: target2
 
 
