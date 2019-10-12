@@ -1,6 +1,6 @@
 ---
 - name: Variable dans le facts Setup
-  hosts: client
+  hosts: all
   remote_user: user
   tasks:
     - debug: var=ansible_memory_mb
