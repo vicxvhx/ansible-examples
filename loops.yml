@@ -1,5 +1,5 @@
 ---
-- hosts: centos
+- hosts: all
   tasks:
   - name:  multiple items .- "{{ item }}"
     file: 

@@ -1,8 +1,6 @@
 ---
 - hosts: all
   become: true
-  vars:
-    motd_value: "{{ lookup('file', '/etc/motd') }}"
   tasks:
     - name: cat file
       command: cat /etc/motd
