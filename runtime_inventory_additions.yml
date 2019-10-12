@@ -22,6 +22,6 @@
         path: /tmp/values
         block: |
           {{hostvars['dummy']['token']}}
-          {{hostvars['dummy']['hash']}}"
+          {{hostvars['dummy']['hash']}}
           {{hostvars['dummy']['ip_address']}}
 
