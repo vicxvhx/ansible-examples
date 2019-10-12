@@ -5,9 +5,11 @@
     command: openssl genrsa -out Dev.key 2048
   - name: copy from centos_remote_a to target2
     synchronize:
-      src: Dev.key
+      src: /home/centos/Dev.key
       dest: /tmp/Dev.key
       mode: pull
     delegate_to: target2
+
+
 
 
