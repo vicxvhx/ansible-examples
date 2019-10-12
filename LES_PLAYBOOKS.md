@@ -1,4 +1,4 @@
-# Installation du bac a sable ansible-examples
+# Les Playbooks
 
 ## Mise en place des containers et du fichier inventory
 Demarrer des containers pour simuler plusieurs machines   
@@ -58,8 +58,8 @@ et modifier les password et adresse IP
 dans la directory ansible-examples editez le fichier ansible_ping.yml
 
 ## Premiere commande ansible-playbook
- ```ansible-playbook  -i ../inventory_children ansible_ping.yml  --limit centosdocker```
- ```ansible-playbook  -i ../inventory_children ansible_ping.yml  --limit centos```
+ ```ansible-playbook  -i ../inventory ansible_ping.yml  --limit centosdocker```
+ ```ansible-playbook  -i ../inventory ansible_ping.yml  --limit centos```
 
 ## Ad-Hoc commande pour afficher les facts 
 ```ansible target2 -i ../inventory -m setup```

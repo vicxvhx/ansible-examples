@@ -5,10 +5,10 @@
   tasks:
     - name: Print first message
       debug:
-        msg: "{{'test'| upper }}"
+        msg: "{{'TeSt '| upper }}"
     - name: Print second message
       debug:
-        msg: "{{'test'| upper }}"
+        msg: "{{'TeST'| lower }}"
     - name: Print third message
       debug:
         msg: "{{'test'| a_filter}}"
