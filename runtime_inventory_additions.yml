@@ -18,12 +18,14 @@
 
 - hosts: target2
   tasks:
+    - name: if exist delete file
+      file: path=/tmp/values state=absent
     - name: create a file
       file: path=/tmp/values state=touch
     - name: add values
       blockinfile:
         path: /tmp/values
-        marker: False
+        marker: ""
         block: |
           {{hostvars['dummy']['token']}}
           {{hostvars['dummy']['hash']}}
