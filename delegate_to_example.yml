@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: centos_remote_a
   tasks:
   - name: get a token
     command: openssl genrsa -out /home/centos/Dev.key 2048
@@ -8,7 +8,7 @@
       src: /home/centos/Dev.key
       dest: /tmp/Dev.key
       mode: pull
-    delegate_to: target2
+    delegate_to: centos_remote_b
 
 
 
