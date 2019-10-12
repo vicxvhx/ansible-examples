@@ -12,7 +12,7 @@
   - name: add new node into runtime inventory
     add_host:
        name: "dummy"
-       token: "test"
+       token: "{{my_token.stdout}}"
        hash: "{{ my_hash.stdout }}"
        ip_address: "192.168.1.10"
 
@@ -23,6 +23,7 @@
     - name: add values
       blockinfile:
         path: /tmp/values
+        marker: False
         block: |
           {{hostvars['dummy']['token']}}
           {{hostvars['dummy']['hash']}}
