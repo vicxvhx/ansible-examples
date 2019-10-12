@@ -1,5 +1,5 @@
 ---
-- name: obtenir des informations sur la memoire Setup
+- name: obtenir des informations sur la memoire par les facts (setup)
   hosts: all
   tasks:
     - debug: var=ansible_memory_mb
