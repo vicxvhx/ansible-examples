@@ -17,7 +17,7 @@
 - hosts: target2
   tasks:
     - name: create a file
-      file: src=/tmp/values state=touch
+      file: path=/tmp/values state=touch
     - name: add values
       blockinfile:
         path: /tmp/values
