@@ -1,13 +1,12 @@
 ---
 - hosts: localhost
-  become: true
   tasks:
   - name: get a token
     command: openssl genrsa -out /home/centos/Dev.key 2048
   - name: copy from centos_remote_a to target2
     synchronize:
       src: /home/centos/Dev.key
-      dest: rsync://tmp/Dev.key
+      dest: /tmp/Dev.key
       mode: pull
     delegate_to: target2
 
