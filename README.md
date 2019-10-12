@@ -49,6 +49,22 @@ et
 et faire la commande Ansible Ad-Hoc 
 ```ansible all -m ping -i inventory```
 
+## Presentation des groupes
+dans la directory ansible-examples copiez le fichier inventory children 
+vers votre home directory. 
+et modifier les password et adresse IP 
+
+## Premier script YAML
+dans la directory ansible-examples editez le fichier ansible_ping.yml
+
+## Premiere commande ansible-playbook
+ ```ansible-playbook  -i ../inventory ansible_ping.yml  --limit centosdocker```
+ ```ansible-playbook  -i ../inventory ansible_ping.yml  --limit centos```
+
+## Ad-Hoc commande pour afficher les facts 
+```ansible target2 -i ../inventory -m setup```
+
+
 
 
 
