@@ -9,10 +9,10 @@
       register: result
     - name: Uppercase message
       debug:
-        msg: "{{ result | upper }}"
+        msg: "{{ result.stdout | upper }}"
     - name: Lower Message
       debug:
-        msg: "{{ result | lower }}"
+        msg: "{{ result.stdout | lower }}"
     - name: Funny message
       debug:
-        msg: "{{ result | a_filter}}"
+        msg: "{{ result.stdout | a_filter}}"
