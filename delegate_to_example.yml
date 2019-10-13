@@ -7,7 +7,7 @@
   - name: synchronize a directory from server A to server B
     become: true
     synchronize:
-      src: /tmp
-      dest: /
+      src: /tmp/*
+      dest: /tmp
       mode: pull
     delegate_to: target2
