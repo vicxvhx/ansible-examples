@@ -9,4 +9,5 @@
     synchronize:
       src: /tmp
       dest: /tmp
+      mode: pull
     delegate_to: target2
