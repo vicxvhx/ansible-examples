@@ -4,32 +4,32 @@
 ```ansible target2 -i ../inventory -m setup``
 
 ## Les facts dans un fichier YAML
-### utilisation de when 
+### Utilisation de when 
 ```ansible-playbook -i ../inventory_children ansible_facts_using_when.yml```
-### utilisation de la commande assert 
+### Utilisation de la commande assert 
 ```ansible-playbook -i ../inventory_children ansible_facts_using_assert.yml```  
 
 ## Passage d'information entre hosts
-## Runtime Inventory 
+### Runtime Inventory 
 Pour passer des variables entre remote-to-remote host il est possible
 de creer un host de type dummy et lui attacher des variables pour les passer 
 vers l'autre host.
 
 ```ansible-playbook -i ../inventory_children runtime_inventory_additions.yml```
 
-## Autre exemple avec delegate_to
+### Autre exemple avec delegate_to
 ```ansible-playbook -i ../inventory_children delegate_to_example.yml```
 
-# Utilisation des variables et des filtres 
+## Utilisation des variables et des filtres 
 
-## Changer the Message Of The Day (MOTD) 
+### Changer the Message Of The Day (MOTD) 
 ```ansible-playbook -i ../inventory_children motd.yml --limit target2```
 
-## Les filters, creer son propre filtre 
+### Les filters, creer son propre filtre 
 ```ansible-playbook -i ../inventory_children new_filter.yml --limit target2```
 
-# Les modules
-## Creer son propre module 
+## Les modules
+### Creer son propre module 
 Allez dans votre repository github pour creer un token   
 clicker sur les Settings de votre compte github et selectionnez  
 Developer Settings et ensuite Personnal Access Tokens 
@@ -39,9 +39,9 @@ token.
 Toujours sous le prompt venv
 faire ```pip3 install requests``` et 
 ```ansible-playbook -i ../inventory_children ansible_create_module.yml```
-# Les Roles
+## Les Roles
 
-## Mettre le precedement playbook dans un role 
+### Mettre le precedement playbook dans un role 
 Dans votre home directory toujours sous le prompt venv
 faire ```mkdir example-role```  
 et ```cd example-role```  
@@ -76,6 +76,34 @@ git_key: d6f90b4be8axxxxxxxxxxxxxxx
 ```
 Revenez dans votre directory ou est installe le playbook et faire
 ``` ansible-playbook -i ../inventory_children playbook.yml```
+
+## Ansible Vault
+Nous allons voir comment crypter nos informations sensibles avec Ansible
+Crypter la variable token dans votre projet @ defaults/main.yml  
+Tapez  
+```ansible-vault encrypt  main.yml```   
+entrez votre mot de passe   
+mettrez ce mot de passe dans un fichier  
+```vi /home/<home_directory>/mysecret```   
+Vous pouvez executer le playbook avec   
+```ansible-playbook -i ../inventory_children --vault-password-file /home/<home_directory>/mysecret playbook.yml``` 
+vous pouvez metter le path de ce fichier dans votre ```.bash_profile``` file.  
+```export  ANSIBLE_VAULT_PASSWORD_FILE=/home/<home>/mysecret```      
+et vous entrez la commande sans vous soucier du fichier du mot de passe  
+```ansible-playbook -i ../inventory_children playbook.yml``` 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
