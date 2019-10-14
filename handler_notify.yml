@@ -1,7 +1,7 @@
 ---
 - name: how to use flush_handlers
   hosts: centos
-  become: ctrue
+  become: true
 
   tasks:
     - name: install nginx
