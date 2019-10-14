@@ -5,7 +5,7 @@
 
   tasks:
     - name: install nginx
-      dnf:
+      yum:
         name: nginx
     - name: copy TLS key
       copy:
