@@ -1,6 +1,8 @@
 ---
 - name: how to use flush_handlers
   hosts: centos
+  vars:
+      test: " Handlers et Notify"
   become: true
 
   tasks:
