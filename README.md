@@ -30,13 +30,18 @@ dans vi faire une substition
  
 en fonction de vos adresses IP fourni en cours 
 modifier egalement la VM centos-remote
-  
- 
-## Installation de VirtualEnv Python et Test Ad-Hoc commande
+
+Dans votre home directory,  faire  
+```ssh-keygen -t rsa -b 4096 -C "votre adresse mail"```
+sans passphrase  
+Et
+```ssh-copy-id hme@<remote_id_address>```
+
+## Installation de VirtualEnv Python et faire des Tests avec les Ad-Hoc commandes
 
 Dans votre home directory, faire
 `` python3 -m venv venv``  
-cela installe le virtualenv Python dans la directory venv  
+cela installe le systeme virtualenv Python dans la directory venv  
 Faire  
 ```source venv/bin/activate``` 
 Votre prompt change 
@@ -49,10 +54,20 @@ et
 et faire la commande Ansible Ad-Hoc 
 ```ansible all -m ping -i inventory```
 
+Faire ensuite 
+```ansible centos -m yum -a "name=elinks state=latest" -i inventory
+ansible centos -b -m yum -a "name=elinks state=latest" -i inventory
+ansible centos --list-hosts -i inventory
+ansible all -m setup -a "filter=ansible_default_ipv4"  -i inventory
+ansible all -m command -a "df -h" -i inventory
+ansible centos -m yum -a "name=* state=latest" -f 100  -i inventory
+ansible centos -m file -a "dest=/home/centos/testfile state=touch" -i inventory 
+```
+
 ## Presentation des groupes
 dans la directory ansible-examples copiez le fichier inventory children 
 vers votre home directory. 
-et modifier les password et adresse IP 
+et modifier les passwords et adresses IP 
 
 ## Premier script YAML
 dans la directory ansible-examples editez le fichier ansible_ping.yml
