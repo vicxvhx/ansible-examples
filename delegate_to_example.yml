@@ -1,5 +1,6 @@
 ---
 - hosts: centos_remote_a
+  become: true
   tasks:
   - name: get a token and move it to target 2
     command: openssl genrsa -out /home/centos/Dev.key 2048
