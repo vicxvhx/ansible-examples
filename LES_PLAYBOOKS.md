@@ -9,7 +9,13 @@
 ### Utilisation de la commande assert 
 ```ansible-playbook -i ../inventory_children ansible_facts_using_assert.yml```  
 
-## Passage d'information entre hosts
+### Le prompt et les conditions
+```ansible-playbook -i ../inventory_children conditions.yml --limit centos```
+
+### les boucles
+```ansible-playbook -i ../inventory_children loops.yml --limit centos```
+
+## Passage d'information entre les hosts
 ### Runtime Inventory 
 Pour passer des variables entre remote-to-remote host il est possible
 de creer un host de type dummy et lui attacher des variables pour les passer 
@@ -17,8 +23,16 @@ vers l'autre host.
 
 ```ansible-playbook -i ../inventory_children runtime_inventory_additions.yml```
 
-### Autre exemple avec delegate_to
-```ansible-playbook -i ../inventory_children delegate_to_example.yml```
+### Inventaire dynamique
+Faire un fork de ce repo  
+```https://github.com/numerica-ansible/ansible-dynamic-repository.git```
+dans votre repo github
+et faire un git clone, dans votre home directory,  la vm ansible controller   
+Changer le fichier my_inventory.py   
+mettre l'adresse IP de votre remote VM dans la structure JSON   
+et  tapez
+```ansible-playbok -i my_inventory.py playbook.yml```
+
 
 ## Utilisation des variables et des filtres 
 
