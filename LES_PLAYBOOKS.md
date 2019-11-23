@@ -1,7 +1,7 @@
 # Les Playbooks
 
 ## Ad-Hoc commande pour afficher les facts 
-```ansible target2 -i ../inventory -m setup``
+```ansible target2 -i ../inventory -m setup```
 
 ## Les facts dans un fichier YAML
 ### Utilisation de when 

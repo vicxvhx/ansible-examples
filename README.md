@@ -2,13 +2,15 @@
 
 ## Mise en place des containers et du fichier inventory
 Demarrer des containers pour simuler plusieurs machines   
-``docker run -d --name target1 systemdevformations/ubuntu_ssh:v2
-  docker run -d --name target2 systemdevformations/centos_ssh:v2
-  docker run -d --name target3 systemdevformations/alpine_ssh:v2``
+```jsunicoderegexp
+docker run -d --name target1 systemdevformations/ubuntu_ssh:v2
+docker run -d --name target2 systemdevformations/centos_ssh:v
+docker run -d --name target3 systemdevformations/alpine_ssh:v2
+```
 Retrouver l'adresse ip des containers
 Faire un docker ps   
 
-```
+```code
 CONTAINER ID        IMAGE                            COMMAND                  CREATED             STATUS                    PORTS               NAMES
 b696423c6b9b        systemdevformations/alpine_ssh   /entrypoint.sh         12 minutes ago      Up 12 minutes             22/tcp              target3  
 51d42febdc76        systemdevformations/centos_ssh   /usr/bin/supervisor…   12 minutes ago      Up 12 minutes (healthy)   22/tcp              target2
