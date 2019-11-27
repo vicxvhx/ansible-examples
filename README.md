@@ -1,13 +1,13 @@
 # Installation du bac a sable ansible-examples
 
 ## Mise en place des containers et du fichier inventory
-Demarrer des containers pour simuler plusieurs machines   
+Demarrer des containers pour simuler plusieurs machines.   
 ```jsunicoderegexp
 docker run -d --name target1 systemdevformations/ubuntu_ssh:v2
 docker run -d --name target2 systemdevformations/centos_ssh:v4
 docker run -d --name target3 systemdevformations/alpine_ssh:v2
 ```
-Retrouver l'adresse ip des containers
+Retrouver l'adresse ip des containers  
 Faire un docker ps   
 
 ```code
@@ -16,7 +16,6 @@ b696423c6b9b        systemdevformations/alpine_ssh   /entrypoint.sh         12 m
 51d42febdc76        systemdevformations/centos_ssh   /usr/bin/supervisor…   12 minutes ago      Up 12 minutes (healthy)   22/tcp              target2
 4bc05c32d342        systemdevformations/ubuntu_ssh   /usr/sbin/sshd -D     13 minutes ago      Up 13 minutes             22/tcp              target1  
 ```  
-
  et par container    
  ```docker inspect target1 | grep IPA```  
  ```docker inspect target2 | grep IPA```  
@@ -26,11 +25,12 @@ Faire un git fork et clone de ce repo
 ```git clone  <http votre repo forke>```
 
 Depuis la directory /ansible-examples faire ``cp inventory ..``
-et modifier le fichier inventory copie precedement
-dans vi faire une substition
+et modifier le fichier inventory copie avec git clone.  
+
+Dans vi faire une substition  
 ```:1,$s/=xxx/<le password prevu pour le cours>/```
  
-en fonction de vos adresses IP fourni en cours 
+en fonction de vos adresses IP fournies pendant le cours   
 modifier egalement la VM centos-remote
 
 Dans votre home directory,  faire  
