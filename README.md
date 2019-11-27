@@ -4,7 +4,7 @@
 Demarrer des containers pour simuler plusieurs machines   
 ```jsunicoderegexp
 docker run -d --name target1 systemdevformations/ubuntu_ssh:v2
-docker run -d --name target2 systemdevformations/centos_ssh:v
+docker run -d --name target2 systemdevformations/centos_ssh:v4
 docker run -d --name target3 systemdevformations/alpine_ssh:v2
 ```
 Retrouver l'adresse ip des containers
@@ -53,6 +53,11 @@ Faire
 qui install le package wheel qui gere les package Pypi    
 et
 ```pip3 install ansible```
+
+Vous devez egalement installer le package sshpass 
+pour utiliser ssh avec un password sans cle ssh.  
+```apt-get -y install sshpass```
+
 et faire la commande Ansible Ad-Hoc 
 ```ansible all -m ping -i inventory```
 
