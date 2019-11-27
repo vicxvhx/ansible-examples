@@ -55,14 +55,15 @@ et
 ```pip3 install ansible```
 
 Vous devez egalement installer le package sshpass 
-pour utiliser ssh avec un password sans cle ssh.  
+pour utiliser ssh avec un password, c'est-a'dire sans cle ssh.  
 ```apt-get -y install sshpass```
 
 et faire la commande Ansible Ad-Hoc 
 ```ansible all -m ping -i inventory```
 
 Faire ensuite 
-```ansible centos -m yum -a "name=elinks state=latest" -i inventory
+``` code 
+ansible centos -m yum -a "name=elinks state=latest" -i inventory
 ansible centos -b -m yum -a "name=elinks state=latest" -i inventory
 ansible centos --list-hosts -i inventory
 ansible all -m setup -a "filter=ansible_default_ipv4"  -i inventory
