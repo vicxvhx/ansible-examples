@@ -1,7 +1,7 @@
 [local]
 localhost ansible_connection=local  ansible_python_interpreter="/usr/bin/env python"
 [alpine]
-alpine01 ansible_host=172.17.0.4  ansible_user=alpine  ansible_password=xxx ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
+alpine01 ansible_host=172.17.0.4  ansible_user=root  ansible_password=xxx ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
 [centosdocker]
 target2 ansible_host=172.17.0.3  ansible_user=centos  ansible_password=xxx ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
 [centosvm]

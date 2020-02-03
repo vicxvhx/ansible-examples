@@ -5,22 +5,23 @@ Demarrer des containers pour simuler plusieurs machines.
 ```jsunicoderegexp
 docker run -d --name target1 systemdevformations/ubuntu_ssh:v2
 docker run -d --name target2 systemdevformations/centos_ssh:v4
-docker run -d --name target3 systemdevformations/alpine_ssh:v2
+docker run -d --rm -p 1337:22 --name target3 --env ROOT_PASSWORD=Passw0rd systemdevformations/alpine-ssh
 ```
 Retrouver l'adresse ip des containers  
 Faire un docker ps   
 
-```code
-CONTAINER ID        IMAGE                            COMMAND                  CREATED             STATUS                    PORTS               NAMES
-b696423c6b9b        systemdevformations/alpine_ssh   /entrypoint.sh         12 minutes ago      Up 12 minutes             22/tcp              target3  
-51d42febdc76        systemdevformations/centos_ssh   /usr/bin/supervisor…   12 minutes ago      Up 12 minutes (healthy)   22/tcp              target2
-4bc05c32d342        systemdevformations/ubuntu_ssh   /usr/sbin/sshd -D     13 minutes ago      Up 13 minutes             22/tcp              target1  
+```shell script
+CONTAINER ID        IMAGE                               COMMAND                  CREATED             STATUS                    PORTS                  NAMES
+f5034036dc56        systemdevformations/alpine-ssh      "/entrypoint.sh"         11 hours ago        Up 11 hours               0.0.0.0:1337->22/tcp   target3
+c714f0b92509        systemdevformations/centos_ssh:v4   "/usr/bin/supervisor…"   23 hours ago        Up 23 hours (unhealthy)   22/tcp                 target2
+6051c68c1712        systemdevformations/ubuntu_ssh:v2   "/usr/sbin/sshd -D"      23 hours ago        Up 23 hours               22/tcp                 target1              target1  
 ```  
  et par container    
- ```docker inspect target1 | grep IPA```  
- ```docker inspect target2 | grep IPA```  
- ```docker inspect target3 | grep IPA ```
-
+ ```shell script
+ docker inspect target1 | grep IPAddress  # ubuntu/Passw0rd  
+ docker inspect target2 | grep IPAddress  # centos/Passw0rd 
+ docker inspect target3 | grep IPAddress  # alpine/Passw0rd 
+```
 Faire un git fork et clone de ce repo  
 ```git clone  <http votre repo forke>```
 
@@ -78,11 +79,12 @@ et modifier les passwords et adresses IP
 
 ## Premier script YAML
 Dans la directory ansible-examples editez le fichier ansible_ping.yml
-et faire les commandes suivantes
+## Premieres commandes ansible-playbook
+ ```shell script
+ansible-playbook  -i ../inventory_children ansible_ping.yml  --limit centosdocker
+ansible-playbook  -i ../inventory_children ansible_ping.yml  --limit centos
+````
 
-## Premiere commande ansible-playbook
- ```ansible-playbook  -i ../inventory_children ansible_ping.yml  --limit centosdocker```
- ```ansible-playbook  -i ../inventory_children ansible_ping.yml  --limit centos```
 
 
 
