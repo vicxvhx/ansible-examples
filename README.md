@@ -5,14 +5,14 @@ Demarrer des containers pour simuler plusieurs machines.
 ```jsunicoderegexp
 docker run -d --name target1 systemdevformations/ubuntu_ssh:v2
 docker run -d --name target2 systemdevformations/centos_ssh:v4
-docker run -d --rm -p 1337:22 --name target3 --env ROOT_PASSWORD=Passw0rd systemdevformations/alpine-ssh
+docker run -d --rm --name target3 --env ROOT_PASSWORD=Passw0rd systemdevformations/alpine-ssh
 ```
 Retrouver l'adresse ip des containers  
 Faire un docker ps   
 
 ```shell script
 CONTAINER ID        IMAGE                               COMMAND                  CREATED             STATUS                    PORTS                  NAMES
-f5034036dc56        systemdevformations/alpine-ssh      "/entrypoint.sh"         11 hours ago        Up 11 hours               0.0.0.0:1337->22/tcp   target3
+f5034036dc56        systemdevformations/alpine-ssh      "/entrypoint.sh"         11 hours ago        Up 11 hours               22/tcp                 target3
 c714f0b92509        systemdevformations/centos_ssh:v4   "/usr/bin/supervisor…"   23 hours ago        Up 23 hours (unhealthy)   22/tcp                 target2
 6051c68c1712        systemdevformations/ubuntu_ssh:v2   "/usr/sbin/sshd -D"      23 hours ago        Up 23 hours               22/tcp                 target1              target1  
 ```  
