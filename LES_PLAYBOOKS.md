@@ -1,7 +1,7 @@
 # Les Playbooks
 
 ## Ad-Hoc commande pour afficher les facts 
-```ansible target2 -i ../inventory -m setup```
+```ansible target2 -i ../inventory_children -m setup```
 
 ## Les facts dans un fichier YAML
 ### Utilisation de when 
@@ -62,6 +62,7 @@ et ```cd example-role```
 ```ansible-galaxy init github.role```  
 creer un ficher playbook.yml    
 ```yaml
+---
 - name: use a dedicated Ansible module
   hosts: localhost
   roles:
