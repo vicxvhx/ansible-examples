@@ -23,6 +23,11 @@ vers l'autre host.
 
 ```ansible-playbook -i ../inventory_children runtime_inventory_additions.yml```
 
+### Deploiement d'une cle ssh vers des slave hosts
+
+
+
+
 ### Inventaire dynamique
 Faire un fork de ce repo  
 ```https://github.com/numerica-ansible/ansible-dynamic-repository.git```
