@@ -25,8 +25,9 @@ vers l'autre host.
 
 ### Deploiement d'une cle ssh vers des slave hosts
 
-
-
+```shell script
+ ansible-playbook -i inventory_children propagate_ssh_key.yml 
+```
 
 ### Inventaire dynamique
 Faire un fork de ce repo  

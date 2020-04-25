@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c06466ed-1121-4281-9358-dac240b4e14d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/propagate_ssh_key.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/role.docker/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/role.docker/defaults/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/role.docker/handlers/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/role.docker/meta/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/role.docker/tasks/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/role.docker/tests/inventory" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/role.docker/tests/test.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/role.docker/vars/main.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LES_PLAYBOOKS.md" beforeDir="false" afterPath="$PROJECT_DIR$/LES_PLAYBOOKS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory_children" beforeDir="false" afterPath="$PROJECT_DIR$/inventory_children" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/propagate_ssh_key.yml" beforeDir="false" afterPath="$PROJECT_DIR$/propagate_ssh_key.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,30 +60,34 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="modified alpine container" />
     <MESSAGE value="modified alpine container using port 22" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified alpine container using port 22" />
+    <MESSAGE value="Added propagate ssh using delagate_to" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added propagate ssh using delagate_to" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="226" y="0" key="#Deployment" timestamp="1580906579073">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2118" y="0" key="#Deployment" timestamp="1587820575972">
+      <screen x="1920" y="0" width="1680" height="1010" />
     </state>
     <state x="-1200" y="0" key="#Deployment/0.0.1920.1040/-1360.0.1360.728@-1360.0.1360.728" timestamp="1580893226880" />
     <state x="226" y="0" key="#Deployment/0.0.1920.1040/-1360.0.1360.728@0.0.1920.1040" timestamp="1580906579073" />
-    <state x="598" y="119" key="CommitChangelistDialog2" timestamp="1581078361983">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2118" y="0" key="#Deployment/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587820575972" />
+    <state x="2443" y="116" key="CommitChangelistDialog2" timestamp="1587819092516">
+      <screen x="1920" y="0" width="1680" height="1010" />
     </state>
     <state x="598" y="119" key="CommitChangelistDialog2/0.0.1920.1040/-1360.0.1360.728@0.0.1920.1040" timestamp="1580888450147" />
     <state x="598" y="119" key="CommitChangelistDialog2/0.0.1920.1040/-1680.16.1680.1010/1920.0.1440.860/3360.0.1360.728@0.0.1920.1040" timestamp="1581078361983" />
+    <state x="2443" y="116" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587819092516" />
     <state x="598" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1580711050493" />
     <state x="649" y="176" key="FileChooserDialogImpl" timestamp="1580906713577">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-900" y="123" key="FileChooserDialogImpl/0.0.1920.1040/-1360.0.1360.728@-1360.0.1360.728" timestamp="1580898344714" />
     <state x="649" y="176" key="FileChooserDialogImpl/0.0.1920.1040/-1360.0.1360.728@0.0.1920.1040" timestamp="1580906713577" />
-    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1581078427937">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2403" y="250" key="Vcs.Push.Dialog.v2" timestamp="1587819095930">
+      <screen x="1920" y="0" width="1680" height="1010" />
     </state>
     <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1360.0.1360.728@0.0.1920.1040" timestamp="1580888452850" />
     <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1680.16.1680.1010/1920.0.1440.860/3360.0.1360.728@0.0.1920.1040" timestamp="1581078427937" />
+    <state x="2403" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587819095930" />
     <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1580711055497" />
   </component>
 </project>

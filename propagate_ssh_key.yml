@@ -1,7 +1,7 @@
 ---
 # resolved : https://bugzilla.redhat.com/show_bug.cgi?id=1539142
 #
-- hosts: all
+- hosts: all,!local
   vars:
     myuser: justin
   tasks:
@@ -11,7 +11,6 @@
         name: "{{ myuser }}"
         shell: /bin/bash
         password: "{{ '12345678' | password_hash('sha512') }}"
-        groups: wheel
         append: yes
       tags:
         - ceph
@@ -33,13 +32,13 @@
         group: "{{ myuser}}"
         state: touch
         mode: '0600'
-- hosts: ceph
+- hosts: slave
   become: true
   vars:
     myuser: justin
   tasks:
-    - name: create ssh key on admin user myuser
-      delegate_to: ceph-controller
+    - name: create ssh key on admin user {{ myuser }}
+      delegate_to: target2
       openssh_keypair:
         path: "/home/{{myuser}}/.ssh/id_rsa"
         owner: "{{ myuser }}"
@@ -54,8 +53,4 @@
         line: "{{ssh_key['public_key'] }}"
       tags:
         - val
-- hosts: admin
-  become: true
-  roles:
-    - role: role.docker
-      tags: docker
+
