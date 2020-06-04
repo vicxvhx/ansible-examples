@@ -3,7 +3,7 @@
   hosts: all
   become: true
   vars:
-      text_message: " Ansible @ SIGI"
+      text_message: " Bonjour AFIP"
   tasks:
     - name: copy template file
       template:

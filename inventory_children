@@ -9,8 +9,6 @@ centos_remote_a ansible_host=164.132.212.99 ansible_ssh_user=centos ansible_ssh_
 [ubuntu]
 ubuntu01 ansible_host=172.17.0.2  ansible_user=ubuntu  ansible_password=Passw0rd ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
 [centos:children]
-centosdocker
-centosvm
 [slave:children]
 alpine
 ubuntu

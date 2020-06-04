@@ -34,14 +34,14 @@ modifier egalement la VM centos-remote
 
 Dans votre home directory,  faire  
 ```ssh-keygen -t rsa -b 4096 -C "votre adresse mail"```  
-Valider les parametres par defaut  
+Valider les sparametres par defaut  
 sans passphrase  
 Et  
 ```ssh-copy-id centos@<remote_id_address>```  
 
 ## Installation de VirtualEnv Python et faire des Tests avec les Ad-Hoc commandes  
 
-Dans votre home directory, faire  
+Dans votre projet ansible-examples, faire  
 `` python3 -m venv venv``  
 cela installe le systeme virtualenv Python dans la directory venv    
 Faire  
@@ -54,19 +54,19 @@ installe le package wheel qui gere les permission pour installer les packages Pi
 et
 ```pip3 install ansible```
 
-Vous devez egalement installer le package sshpass   
+Vous devez egalement installer le package sshpass     
 pour utiliser ssh avec un password, c'est-a-dire sans une cle ssh propagee.    
 ```sudo apt-get -y install sshpass```  
 avec centos  
 ```sudo yum -y install sshpass```
 
-et faire la commande Ansible Ad-Hoc   
+et faire la commande Ansible Ad-Hoc pour verifier si votre fichier inventory est correct.    
 ```ansible all -m ping -i ../inventory```
-
 Faire ensuite  les Ad-Hoc commandes suivantes:  
-``` code 
+```shell script 
 ansible centos -m yum -a "name=elinks state=latest" -i ../inventory
-ansible centos -b -m yum -a "name=elinks state=latest" -i ../inventory
+ansible centos-remote -m yum -a "name=elinks state=latest" -i ../inventory
+ansible centos-remote -b -m yum -a "name=elinks state=latest" -i ../inventory
 ansible centos --list-hosts -i ../inventory
 ansible all -m setup -a "filter=ansible_default_ipv4"  -i ../inventory
 ansible all -m command -a "df -h" -i ../inventory
