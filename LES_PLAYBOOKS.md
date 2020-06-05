@@ -31,13 +31,13 @@ vers l'autre host.
 
 ### Inventaire dynamique
 Faire un fork de ce repo  
-```https://github.com/numerica-ansible/ansible-dynamic-repository.git```
-dans votre repo github
-et faire un git clone, dans votre home directory,  la vm ansible controller   
-Changer le fichier my_inventory.py   
+```https://github.com/crunchy-devops/ansible-dynamic-repository.git```
+dans votre repo github personnel
+et faire un git clone, dans votre home directory, et dans la vm ansible controller   
+Changer le fichier get_inventory.py   
 mettre l'adresse IP de votre remote VM dans la structure JSON   
 et  tapez
-```ansible-playbok -i my_inventory.py playbook.yml```
+```ansible-playbok -i get_inventory.py playbook.yml```
 
 
 ## Utilisation des variables et des filtres 
