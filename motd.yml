@@ -1,9 +1,9 @@
 ---
 - name: Create MOTD file
-  hosts: all
+  hosts: centos_remote_a
   become: true
   vars:
-      text_message: " Bonjour AFIP"
+      text_message: " Bonjour AWX"
   tasks:
     - name: copy template file
       template:

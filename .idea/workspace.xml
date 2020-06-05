@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c06466ed-1121-4281-9358-dac240b4e14d" name="Default Changelist" comment="added awx inventory">
+    <list default="true" id="c06466ed-1121-4281-9358-dac240b4e14d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory_children" beforeDir="false" afterPath="$PROJECT_DIR$/inventory_children" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LES_PLAYBOOKS.md" beforeDir="false" afterPath="$PROJECT_DIR$/LES_PLAYBOOKS.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +38,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="orchideLicense" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -58,7 +59,8 @@
       <workItem from="1591263052216" duration="9260000" />
       <workItem from="1591281775321" duration="1501000" />
       <workItem from="1591322631698" duration="264000" />
-      <workItem from="1591322920460" duration="6493000" />
+      <workItem from="1591322920460" duration="11549000" />
+      <workItem from="1591346258948" duration="3340000" />
     </task>
     <task id="LOCAL-00001" summary="minor changes">
       <created>1591282108822</created>
@@ -81,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591336649619</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="change inventory children">
+      <created>1591337277758</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1591337277758</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,7 +115,8 @@
     <MESSAGE value="Added propagate ssh using delegate_to" />
     <MESSAGE value="minor changes" />
     <MESSAGE value="added awx inventory" />
-    <option name="LAST_COMMIT_MESSAGE" value="added awx inventory" />
+    <MESSAGE value="change inventory children" />
+    <option name="LAST_COMMIT_MESSAGE" value="change inventory children" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2118" y="0" key="#Deployment" timestamp="1587820575972">
@@ -117,20 +127,24 @@
       <screen x="3360" y="-161" width="1680" height="1010" />
     </state>
     <state x="3946" y="145" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@3360.-161.1680.1010" timestamp="1591334168011" />
-    <state x="4133" y="-15" key="CommitChangelistDialog2" timestamp="1591336985674">
+    <state x="4133" y="-15" key="CommitChangelistDialog2" timestamp="1591337277175">
       <screen x="3360" y="-161" width="1680" height="1010" />
     </state>
     <state x="2693" y="186" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587826622061" />
-    <state x="4133" y="-15" key="CommitChangelistDialog2/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@3360.-161.1680.1010" timestamp="1591336985674" />
+    <state x="4133" y="-15" key="CommitChangelistDialog2/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@3360.-161.1680.1010" timestamp="1591337277175" />
     <state x="3928" y="10" key="FileChooserDialogImpl" timestamp="1591324252045">
       <screen x="3360" y="-161" width="1680" height="1010" />
     </state>
     <state x="2488" y="171" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587879212736" />
     <state x="3928" y="10" key="FileChooserDialogImpl/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@3360.-161.1680.1010" timestamp="1591324252045" />
-    <state x="3843" y="89" key="Vcs.Push.Dialog.v2" timestamp="1591336651178">
+    <state x="3701" y="-12" key="SettingsEditor" timestamp="1591346226353">
+      <screen x="3360" y="-161" width="1680" height="1010" />
+    </state>
+    <state x="3701" y="-12" key="SettingsEditor/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@3360.-161.1680.1010" timestamp="1591346226353" />
+    <state x="3843" y="89" key="Vcs.Push.Dialog.v2" timestamp="1591337280263">
       <screen x="3360" y="-161" width="1680" height="1010" />
     </state>
     <state x="2403" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587826633871" />
-    <state x="3843" y="89" key="Vcs.Push.Dialog.v2/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@3360.-161.1680.1010" timestamp="1591336651178" />
+    <state x="3843" y="89" key="Vcs.Push.Dialog.v2/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@3360.-161.1680.1010" timestamp="1591337280263" />
   </component>
 </project>

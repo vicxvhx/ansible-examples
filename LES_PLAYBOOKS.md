@@ -50,7 +50,7 @@ et  tapez
 
 ## Les modules
 ### Creer son propre module 
-Allez dans votre repository github pour creer un token   
+Allez dans votre compte github pour creer un token   
 clicker sur les Settings de votre compte github et selectionnez  
 Developer Settings et ensuite Personnal Access Tokens 
 Creer un token et lui donner les droits pour creer un repo github.  
@@ -95,7 +95,11 @@ Dans  example-role/github.role/defaults/main.yml
 # defaults file for github.role
 git_key: d6f90b4be8axxxxxxxxxxxxxxx
 ```
-Revenez dans votre directory ou est installe le playbook et faire
+Dans votre directory example-role, faire un 
+```shell script
+   cp -r ../ansible-examples/library . 
+```
+Tapez la commande suivante: 
 ``` ansible-playbook -i ../inventory_children playbook.yml```
 
 ## Ansible Vault
@@ -106,7 +110,7 @@ Tapez
 entrez votre mot de passe   
 mettrez ce mot de passe dans un fichier  
 ```vi /home/<home_directory>/mysecret```   
-Vous pouvez executer le playbook avec   
+Vous pouvez executer le playbook avec dans example-role directory   
 ```ansible-playbook -i ../inventory_children --vault-password-file /home/<home_directory>/mysecret playbook.yml``` 
 vous pouvez metter le path de ce fichier dans votre ```.bash_profile``` file.  
 ```export  ANSIBLE_VAULT_PASSWORD_FILE=/home/<home>/mysecret```      
