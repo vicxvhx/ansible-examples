@@ -22,19 +22,13 @@ c714f0b92509        systemdevformations/centos_ssh:v4   "/usr/bin/supervisor…"
  docker inspect target2 | grep IPAddress  # centos/Passw0rd 
  docker inspect target3 | grep IPAddress  # root/Passw0rd 
 ```
-
-Depuis la directory /ansible-examples faire ``cp inventory ..``  
-et modifier le fichier inventory qui a ete copie un niveau au-dessus de l'arborescence    
-
-Avec vi faire des substitions du mot de passe  
-```:1,$s/=xxx/<le password prevu pour le cours>/```  
-
-en fonction de vos adresses IP fournies pendant le cours     
+  
+en fonction de l'adresses IP fournie pendant le cours     
 modifier egalement la VM centos-remote  
 
 Dans votre home directory,  faire  
 ```ssh-keygen -t rsa -b 4096 -C "votre adresse mail"```  
-Valider les sparametres par defaut  
+Valider les parametres par defaut  
 sans passphrase  
 Et  
 ```ssh-copy-id centos@<remote_id_address>```  
@@ -54,6 +48,12 @@ installe le package wheel qui gere les permission pour installer les packages Pi
 et
 ```pip3 install ansible```
 
+
+
+
+
+
+
 Vous devez egalement installer le package sshpass     
 pour utiliser ssh avec un password, c'est-a-dire sans une cle ssh propagee.    
 ```sudo apt-get -y install sshpass```  
@@ -61,17 +61,17 @@ avec centos
 ```sudo yum -y install sshpass```
 
 et faire la commande Ansible Ad-Hoc pour verifier si votre fichier inventory est correct.    
-```ansible all -m ping -i ../inventory```
+```ansible all -m ping -i inventory```
 Faire ensuite  les Ad-Hoc commandes suivantes:  
 ```shell script 
-ansible centos -m yum -a "name=elinks state=latest" -i ../inventory
-ansible centos-remote -m yum -a "name=elinks state=latest" -i ../inventory
-ansible centos-remote -b -m yum -a "name=elinks state=latest" -i ../inventory
-ansible centos --list-hosts -i ../inventory
-ansible all -m setup -a "filter=ansible_default_ipv4"  -i ../inventory
-ansible all -m command -a "df -h" -i ../inventory
-ansible centos -b -m yum -a "name=* state=latest" -f 100  -i ../inventory
-ansible centos -m file -a "dest=/home/centos/testfile state=touch" -i ../inventory 
+ansible centos -m yum -a "name=elinks state=latest" -i inventory
+ansible centos-remote -m yum -a "name=elinks state=latest" -i inventory
+ansible centos-remote -b -m yum -a "name=elinks state=latest" -i inventory
+ansible all --list-hosts -i ../inventory
+ansible all -m setup -a "filter=ansible_default_ipv4"  -i inventory
+ansible all -m command -a "df -h" -i inventory
+ansible centos -b -m yum -a "name=* state=latest" -f 100  -i inventory
+ansible centos -m file -a "dest=/home/centos/testfile state=touch" -i inventory 
 ```
 ## Presentation des groupes
 Dans la directory ansible-examples copiez le fichier inventory children dans votre home directory.   
@@ -81,6 +81,6 @@ et modifier les passwords et adresses IP comme a l'etape precedente
 Dans la directory ansible-examples editez le fichier ansible_ping.yml, et etudiez le code. 
 ## Premieres commandes ansible-playbook
  ```shell script
-ansible-playbook  -i ../inventory_children ansible_ping.yml  --limit centosdocker
-ansible-playbook  -i ../inventory_children ansible_ping.yml  --limit centos
+ansible-playbook  -i inventory_children ansible_ping.yml  --limit centosdocker
+ansible-playbook  -i inventory_children ansible_ping.yml  --limit centos
 ````
