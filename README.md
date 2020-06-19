@@ -18,9 +18,7 @@ c714f0b92509        systemdevformations/centos_ssh:v4   "/usr/bin/supervisor…"
 ```  
  et retrouver l'adresse IP des containers  
  ```shell script
- docker inspect target1 | grep IPAddress  # ubuntu/Passw0rd  
- docker inspect target2 | grep IPAddress  # centos/Passw0rd 
- docker inspect target3 | grep IPAddress  # root/Passw0rd 
+docker network inspect bridge
 ```
   
 en fonction de l'adresses IP fournie pendant le cours     

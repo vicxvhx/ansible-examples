@@ -1,5 +1,5 @@
 ---
-- hosts: centos
+- hosts: centos_remote_a
   become: true
   tasks:
     - name:  install apache

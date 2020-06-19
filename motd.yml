@@ -1,6 +1,6 @@
 ---
 - name: Create MOTD file
-  hosts: centos_remote_a
+  hosts: all
   become: true
   vars:
       text_message: " Bonjour AWX"
