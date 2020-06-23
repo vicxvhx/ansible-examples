@@ -5,7 +5,7 @@ Demarrer des containers pour simuler plusieurs machines.
 ```shell script
 docker run -d --name target1 systemdevformations/ubuntu_ssh:v2  
 docker run -d --name target2 systemdevformations/centos_ssh:v4  
-docker run -d --rm --name target3 --env ROOT_PASSWORD=Passw0rd systemdevformations/alpine-ssh:v1  
+vi  
 ```
 Retrouver le nom des containers  
 Faire un docker ps   
@@ -65,8 +65,10 @@ Faire ensuite  les Ad-Hoc commandes suivantes:
 ansible centos -m yum -a "name=elinks state=latest" -i inventory
 ansible centos-remote -m yum -a "name=elinks state=latest" -i inventory
 ansible centos-remote -b -m yum -a "name=elinks state=latest" -i inventory
-ansible all --list-hosts -i ../inventory
+ansible all --list-hosts -i inventory
 ansible all -m setup -a "filter=ansible_default_ipv4"  -i inventory
+ansible all -m setup -a "filter=ansible_distribution"  -i inventory 
+ansible all -m setup -a "filter=ansible_distribution_version"  -i inventory 
 ansible all -m command -a "df -h" -i inventory
 ansible centos -b -m yum -a "name=* state=latest" -f 100  -i inventory
 ansible centos -m file -a "dest=/home/centos/testfile state=touch" -i inventory 
