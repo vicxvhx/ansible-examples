@@ -76,8 +76,7 @@ ansible centos -b -m yum -a "name=* state=latest" -f 100  -i inventory
 ansible centos -m file -a "dest=/home/centos/testfile state=touch" -i inventory 
 ```
 ## Presentation des groupes
-Dans la directory ansible-examples copiez le fichier inventory children dans votre home directory.   
-et modifier les passwords et adresses IP comme a l'etape precedente  
+Mettre a jour le ficher inventory_children  
 
 ## Premier script YAML
 Dans la directory ansible-examples editez le fichier ansible_ping.yml, et etudiez le code. 
