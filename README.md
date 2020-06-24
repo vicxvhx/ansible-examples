@@ -5,10 +5,10 @@ Demarrer des containers pour simuler plusieurs machines.
 ```shell script
 docker run -d --name target1 systemdevformations/ubuntu_ssh:v2  
 docker run -d --name target2 systemdevformations/centos_ssh:v4  
-vi  
+docker run -d --rm --name target3 --env ROOT_PASSWORD=Passw0rd systemdevformations/alpine-ssh:v1   
 ```
 Retrouver le nom des containers  
-Faire un docker ps   
+Faire un docker ps | grep systemdevformation  
 
 ```shell script
 CONTAINER ID        IMAGE                               COMMAND                  CREATED             STATUS                    PORTS                  NAMES
@@ -57,6 +57,8 @@ pour utiliser ssh avec un password, c'est-a-dire sans une cle ssh propagee.
 ```sudo apt-get -y install sshpass```  
 avec centos  
 ```sudo yum -y install sshpass```
+
+changer le ficher inventory avec les nouvelles adresses IP 
 
 et faire la commande Ansible Ad-Hoc pour verifier si votre fichier inventory est correct.    
 ```ansible all -m ping -i inventory```
