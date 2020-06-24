@@ -1,5 +1,6 @@
 ---
 - hosts: all
+  become: true
   vars_prompt:
     - name: "is_true"
       prompt: "Entrer votre valeur true ou false"

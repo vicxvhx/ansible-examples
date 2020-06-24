@@ -3,12 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="c06466ed-1121-4281-9358-dac240b4e14d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory_children" beforeDir="false" afterPath="$PROJECT_DIR$/inventory_children" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conditions.yml" beforeDir="false" afterPath="$PROJECT_DIR$/conditions.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="GOROOT" path="D:\Go" />
   <component name="Git.Settings">
@@ -16,6 +20,9 @@
   </component>
   <component name="Jenkins.Settings">
     <option name="lastSelectedView" value="all" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1XCbEqrQQkAVok2pP2AlUVriglA" />
   <component name="ProjectViewState">
@@ -31,14 +38,14 @@
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../kubernetes/k8s-webforce3" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="orchideLicense" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -60,7 +67,9 @@
       <workItem from="1591281775321" duration="1501000" />
       <workItem from="1591322631698" duration="264000" />
       <workItem from="1591322920460" duration="11549000" />
-      <workItem from="1591346258948" duration="6110000" />
+      <workItem from="1591346258948" duration="6903000" />
+      <workItem from="1591624475913" duration="40000" />
+      <workItem from="1591624530337" duration="603000" />
     </task>
     <task id="LOCAL-00001" summary="minor changes">
       <created>1591282108822</created>
@@ -104,33 +113,49 @@
       <option name="project" value="LOCAL" />
       <updated>1591360708096</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="change inventory children">
+      <created>1591364111660</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1591364111660</updated>
+    </task>
+    <task id="LOCAL-00008" summary="change inventory children">
+      <created>1591364281273</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1591364281273</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="modified alpine container" />
     <MESSAGE value="modified alpine container using port 22" />
     <MESSAGE value="Added propagate ssh using delagate_to" />
     <MESSAGE value="Added propagate ssh using delegate_to" />
-    <MESSAGE value="minor changes" />
     <MESSAGE value="added awx inventory" />
     <MESSAGE value="change inventory children" />
-    <option name="LAST_COMMIT_MESSAGE" value="change inventory children" />
+    <MESSAGE value="change inventory children and inventory" />
+    <MESSAGE value="minor changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor changes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2118" y="0" key="#Deployment" timestamp="1587820575972">
@@ -141,24 +166,35 @@
       <screen x="3360" y="-161" width="1680" height="1010" />
     </state>
     <state x="3946" y="145" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@3360.-161.1680.1010" timestamp="1591334168011" />
-    <state x="4133" y="-15" key="CommitChangelistDialog2" timestamp="1591360707396">
-      <screen x="3360" y="-161" width="1680" height="1010" />
+    <state x="2583" y="57" key="CommitChangelistDialog2" timestamp="1593003531042">
+      <screen x="1920" y="0" width="1440" height="860" />
     </state>
     <state x="2693" y="186" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587826622061" />
-    <state x="4133" y="-15" key="CommitChangelistDialog2/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@3360.-161.1680.1010" timestamp="1591360707396" />
-    <state x="3928" y="10" key="FileChooserDialogImpl" timestamp="1591324252045">
+    <state x="2583" y="57" key="CommitChangelistDialog2/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@1920.0.1440.860" timestamp="1593003531042" />
+    <state x="4133" y="-15" key="CommitChangelistDialog2/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@3360.-161.1680.1010" timestamp="1592892568151" />
+    <state x="3452" y="-69" width="1496" height="826" key="DiffContextDialog" timestamp="1593001883850">
+      <screen x="3360" y="-161" width="1680" height="1010" />
+    </state>
+    <state x="3452" y="-69" width="1496" height="826" key="DiffContextDialog/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@1920.0.1440.860" timestamp="1593001883850" />
+    <state x="3452" y="-69" width="1496" height="826" key="DiffContextDialog/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@3360.-161.1680.1010" timestamp="1593000392041" />
+    <state x="3928" y="10" key="FileChooserDialogImpl" timestamp="1592359443218">
       <screen x="3360" y="-161" width="1680" height="1010" />
     </state>
     <state x="2488" y="171" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587879212736" />
-    <state x="3928" y="10" key="FileChooserDialogImpl/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@3360.-161.1680.1010" timestamp="1591324252045" />
-    <state x="3701" y="-12" key="SettingsEditor" timestamp="1591346226353">
+    <state x="3928" y="10" key="FileChooserDialogImpl/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@3360.-161.1680.1010" timestamp="1592359443218" />
+    <state x="3701" y="-12" key="SettingsEditor" timestamp="1592973834133">
       <screen x="3360" y="-161" width="1680" height="1010" />
     </state>
-    <state x="3701" y="-12" key="SettingsEditor/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@3360.-161.1680.1010" timestamp="1591346226353" />
-    <state x="3843" y="89" key="Vcs.Push.Dialog.v2" timestamp="1591360710071">
+    <state x="3701" y="-12" key="SettingsEditor/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@3360.-161.1680.1010" timestamp="1592973834133" />
+    <state x="4025" y="260" key="SetupCloudRepositoryDialog" timestamp="1592974068376">
       <screen x="3360" y="-161" width="1680" height="1010" />
+    </state>
+    <state x="4025" y="260" key="SetupCloudRepositoryDialog/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@3360.-161.1680.1010" timestamp="1592974068376" />
+    <state x="2334" y="213" key="Vcs.Push.Dialog.v2" timestamp="1593003533513">
+      <screen x="1920" y="0" width="1440" height="860" />
     </state>
     <state x="2403" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587826633871" />
-    <state x="3843" y="89" key="Vcs.Push.Dialog.v2/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@3360.-161.1680.1010" timestamp="1591360710071" />
+    <state x="2334" y="213" key="Vcs.Push.Dialog.v2/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@1920.0.1440.860" timestamp="1593003533513" />
+    <state x="3843" y="89" key="Vcs.Push.Dialog.v2/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@3360.-161.1680.1010" timestamp="1592892570877" />
   </component>
 </project>

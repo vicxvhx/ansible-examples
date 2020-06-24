@@ -33,6 +33,8 @@ Et
 
 ## Installation de VirtualEnv Python et faire des Tests avec les Ad-Hoc commandes  
 
+Dans votre home directory faire un git clone de https://github.com
+
 Dans votre projet ansible-examples, faire  
 `` python3 -m venv venv``  
 cela installe le systeme virtualenv Python dans la directory venv    
@@ -45,12 +47,6 @@ Faire
 installe le package wheel qui gere les permission pour installer les packages Pip     
 et
 ```pip3 install ansible```
-
-
-
-
-
-
 
 Vous devez egalement installer le package sshpass     
 pour utiliser ssh avec un password, c'est-a-dire sans une cle ssh propagee.    
@@ -76,7 +72,7 @@ ansible centos -b -m yum -a "name=* state=latest" -f 100  -i inventory
 ansible centos -m file -a "dest=/home/centos/testfile state=touch" -i inventory 
 ```
 ## Presentation des groupes
-Mettre a jour le ficher inventory_children  
+Mettre a jour le ficher inventory_children  sans en modifier la structure  
 
 ## Premier script YAML
 Dans la directory ansible-examples editez le fichier ansible_ping.yml, et etudiez le code. 
