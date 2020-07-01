@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c06466ed-1121-4281-9358-dac240b4e14d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LES_PLAYBOOKS.md" beforeDir="false" afterPath="$PROJECT_DIR$/LES_PLAYBOOKS.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conditions.yml" beforeDir="false" afterPath="$PROJECT_DIR$/conditions.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory" beforeDir="false" afterPath="$PROJECT_DIR$/inventory" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,13 +40,14 @@
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../kubernetes/k8s-webforce3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ci-cd/opencms-core" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -131,20 +134,19 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="modified alpine container" />
@@ -166,35 +168,36 @@
       <screen x="3360" y="-161" width="1680" height="1010" />
     </state>
     <state x="3946" y="145" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@3360.-161.1680.1010" timestamp="1591334168011" />
-    <state x="2583" y="57" key="CommitChangelistDialog2" timestamp="1593003531042">
-      <screen x="1920" y="0" width="1440" height="860" />
+    <state x="4133" y="-15" key="CommitChangelistDialog2" timestamp="1593006713985">
+      <screen x="3360" y="-161" width="1680" height="1010" />
     </state>
     <state x="2693" y="186" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587826622061" />
     <state x="2583" y="57" key="CommitChangelistDialog2/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@1920.0.1440.860" timestamp="1593003531042" />
-    <state x="4133" y="-15" key="CommitChangelistDialog2/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@3360.-161.1680.1010" timestamp="1592892568151" />
+    <state x="4133" y="-15" key="CommitChangelistDialog2/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@3360.-161.1680.1010" timestamp="1593006713985" />
     <state x="3452" y="-69" width="1496" height="826" key="DiffContextDialog" timestamp="1593001883850">
       <screen x="3360" y="-161" width="1680" height="1010" />
     </state>
     <state x="3452" y="-69" width="1496" height="826" key="DiffContextDialog/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@1920.0.1440.860" timestamp="1593001883850" />
     <state x="3452" y="-69" width="1496" height="826" key="DiffContextDialog/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@3360.-161.1680.1010" timestamp="1593000392041" />
-    <state x="3928" y="10" key="FileChooserDialogImpl" timestamp="1592359443218">
-      <screen x="3360" y="-161" width="1680" height="1010" />
+    <state x="2407" y="146" key="FileChooserDialogImpl" timestamp="1593150865270">
+      <screen x="1920" y="0" width="1440" height="860" />
     </state>
     <state x="2488" y="171" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587879212736" />
-    <state x="3928" y="10" key="FileChooserDialogImpl/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@3360.-161.1680.1010" timestamp="1592359443218" />
-    <state x="3701" y="-12" key="SettingsEditor" timestamp="1592973834133">
-      <screen x="3360" y="-161" width="1680" height="1010" />
+    <state x="2407" y="146" key="FileChooserDialogImpl/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@1920.0.1440.860" timestamp="1593150865270" />
+    <state x="3928" y="10" key="FileChooserDialogImpl/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@3360.-161.1680.1010" timestamp="1593065465414" />
+    <state x="2235" y="60" key="SettingsEditor" timestamp="1593006983144">
+      <screen x="1920" y="0" width="1440" height="860" />
     </state>
-    <state x="3701" y="-12" key="SettingsEditor/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@3360.-161.1680.1010" timestamp="1592973834133" />
+    <state x="2235" y="60" key="SettingsEditor/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@3360.-161.1680.1010" timestamp="1593006983144" />
     <state x="4025" y="260" key="SetupCloudRepositoryDialog" timestamp="1592974068376">
       <screen x="3360" y="-161" width="1680" height="1010" />
     </state>
     <state x="4025" y="260" key="SetupCloudRepositoryDialog/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@3360.-161.1680.1010" timestamp="1592974068376" />
-    <state x="2334" y="213" key="Vcs.Push.Dialog.v2" timestamp="1593003533513">
-      <screen x="1920" y="0" width="1440" height="860" />
+    <state x="3843" y="89" key="Vcs.Push.Dialog.v2" timestamp="1593006716089">
+      <screen x="3360" y="-161" width="1680" height="1010" />
     </state>
     <state x="2403" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1587826633871" />
     <state x="2334" y="213" key="Vcs.Push.Dialog.v2/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@1920.0.1440.860" timestamp="1593003533513" />
-    <state x="3843" y="89" key="Vcs.Push.Dialog.v2/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@3360.-161.1680.1010" timestamp="1592892570877" />
+    <state x="3843" y="89" key="Vcs.Push.Dialog.v2/0.0.1920.1040/3360.-161.1680.1010/1920.0.1440.860/-1360.0.1360.728@3360.-161.1680.1010" timestamp="1593006716089" />
   </component>
 </project>

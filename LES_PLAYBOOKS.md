@@ -31,13 +31,18 @@ vers l'autre host.
 
 ### Inventaire dynamique
 Faire un fork de ce repo  
-```https://github.com/crunchy-devops/ansible-dynamic-repository.git```
+```https://github.com/crunchy-devops/ansible-dynamic-inventory.git```
 dans votre repo github personnel
 et faire un git clone, dans votre home directory, et dans la vm ansible controller   
 Changer le fichier get_inventory.py   
-mettre l'adresse IP de votre remote VM dans la structure JSON   
-et  tapez
-```ansible-playbok -i get_inventory.py playbook.yml```
+mettre l'adresse IP de votre remote VM dans la structure JSON 
+```shell script
+'group': {
+          'hosts': ['51.68.28.179' ],
+```
+Save, git commit and git push
+et  tapez dans votre VM
+```ansible-playbook -i get_inventory.py playbook.yml```
 
 
 ## Utilisation des variables et des filtres 
@@ -58,7 +63,7 @@ Dans votre home directory faire un ```vi token``` et copier votre
 token.  
 Toujours sous le prompt venv
 faire ```pip3 install requests``` et 
-```ansible-playbook -i ../inventory_children ansible_create_module.yml```
+```ansible-playbook -i inventory_children ansible_create_module.yml```
 ## Les Roles
 
 ### Mettre le precedement playbook dans un role 
@@ -104,7 +109,7 @@ Tapez la commande suivante:
 
 ## Ansible Vault
 Nous allons voir comment crypter nos informations sensibles avec Ansible
-Crypter la variable token dans votre projet @ defaults/main.yml  
+Crypter la variable token dans votre projet example defaults/main.yml  
 Tapez  
 ```ansible-vault encrypt  main.yml```   
 entrez votre mot de passe   

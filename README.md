@@ -20,7 +20,7 @@ c714f0b92509        systemdevformations/centos_ssh:v4   "/usr/bin/supervisor…"
  ```shell script
 docker network inspect bridge
 ```
-  
+
 en fonction de l'adresses IP fournie pendant le cours     
 modifier egalement la VM centos-remote  
 
