@@ -46,9 +46,9 @@ et  tapez dans votre VM
 
 
 ## Utilisation des variables et des filtres 
-
+Retourner dans ansible-examples
 ### Changer the Message Of The Day (MOTD) 
-```ansible-playbook -i inventory_children motd.yml --limit centos```
+```ansible-playbook -i inventory_children motd.yml```
 
 ### Les filters, creer son propre filtre 
 ```ansible-playbook -i inventory_children new_filter.yml --limit target2```
@@ -56,16 +56,16 @@ et  tapez dans votre VM
 ## Les modules
 ### Creer son propre module 
 Allez dans votre compte github pour creer un token   
-clicker sur les Settings de votre compte github et selectionnez  
+cliker sur les Settings de votre compte github et selectionnez  
 Developer Settings et ensuite Personnal Access Tokens 
 Creer un token et lui donner les droits pour creer un repo github.  
 Dans votre home directory faire un ```vi token``` et copier votre
 token.  
-Toujours sous le prompt venv
+Toujours sous le prompt venv dans votre directory ansible-examples
 faire ```pip3 install requests``` et 
 ```ansible-playbook -i inventory_children ansible_create_module.yml```
-## Les Roles
 
+## Les Roles
 ### Mettre le precedement playbook dans un role 
 Dans votre home directory toujours sous le prompt venv
 faire ```mkdir example-role```  
@@ -103,6 +103,7 @@ git_key: d6f90b4be8axxxxxxxxxxxxxxx
 Dans votre directory example-role, faire un 
 ```shell script
    cp -r ../ansible-examples/library . 
+   cp -r ../ansible-examples/inventory_children . 
 ```
 Tapez la commande suivante: 
 ``` ansible-playbook -i inventory_children playbook.yml```
